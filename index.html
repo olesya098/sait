@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Первый сайт
+	</title>
+
+<link rel="stylesheet" type="text/css" href="style.css"> <!-- ссылка на css-->
+<script src="sait_1.js"></script><!-- ссылка на js-->
+
+
+</head>
+<body>
+	<header>
+		<button id="category_1" onclick="CategorySelected(event)">О фильмах</button>
+		<button id="category_2" onclick="CategorySelected(event)">Автор</button>
+		<button id="category_3" onclick="CategorySelected(event)">О нас</button>
+		<button id="category_4" onclick="CategorySelected(event)">Начать</button>
+	</header>
+
+	<div class="content category_1 active"> <!-- если класс active, то данный элемент отображается -->
+		<h2>О фильмах</h2>
+		<p>
+			Фильмы -  это прекрасный способ отдохнуть после тяжёлого рабочего дня. Фильмы также являются творением искусства. С помощью них мы можем окунуться в удивительный мир фантазий. Фильмы - это радость и для детей и для взрослых!</p>
+	</div>
+		<div class="content category_2">
+		<h2>Автор</h2>
+		<p>Добро пожаловать! Вас приветствует создатель этого сайта!</p>
+	</div>
+		<div class="content category_3">
+		<h2>О нас</h2>
+		<p>Этот сайт является простой и пробной версией. Это мелкий шажок в программировании, но гиганский щаг для меня!</p>
+	</div>
+		<div class="content category_4">
+		<h2>Начать</h2>
+		<p>С этого момента я начинаю новую жизнь благодаря этому сайту.</p>
+	</div>
+</body>
+</html>

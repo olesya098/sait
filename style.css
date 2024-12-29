@@ -1,0 +1,77 @@
+html, body {
+	margin: 0;  /* убираем задний фон*/
+	min-height: 100%; /*минимальный размер экрана*/
+}
+*{
+	color: #7E5130; /*везде шрифт белый*/
+}
+body{
+	background-image: url('bacground.png');
+	background-size: cover; /*Изменение картинки в зависимости от размера экрана*/
+	background-repeat: no-repeat ;/*Что бы картинка не дублировалась*/
+	background-position: bottom center;/*Всегда будет прикреплена к низу*/
+}
+header{
+	padding-top: 0.8em;
+	text-align: center;
+}
+header button{
+	font-size: 18px;
+	border: none;
+	border-bottom: .05em solid transparent ;
+	background: none;
+	cursor: pointer;/*при наведении превращается в руку*/
+}
+header button:hover{/*при наведении*/
+border-color: #7E5130;/*показываем полоску*/ 
+border-radius: 20%;
+}
+.content{
+	margin: 0 auto;/*сверху никакого отступа*/
+	width: 80%;
+	margin-top: 200px;
+	font-size: 20px;
+	display: none;
+}
+
+.active{
+	display: block;
+
+	/*анимация для плавного перелистывания*/
+	transition: all 2s;/*анимация занимает 4 секунды*/
+	animation-name: appear;
+	animation-duration: 1s;/*анимация длится 2 секунды*/
+	border-radius: 10px;/*смягчаем углы анимации*/
+	padding: 0.15em;
+
+}
+/*при наведении на active элемент появляется тень*/
+.active:hover{
+	background-image: linear-gradient(0deg,#DDBBA1, transparent);/*появляется тень и потихонько пуруходит в прозрачный*/
+}
+
+/*сама анимаци я с помошью слова  @keyframes*/
+
+@keyframes appear{
+	/*шаги для анимации*/
+	0%{opacity: 0;}
+	100% {opacity: 1;}
+}
+
+h2{
+	text-align: center;
+	border-bottom: 0.05em  solid #7E5130;
+	border-radius: 20%;
+	font-size: 25px;
+	width: fit-content;/*так что б бордер бал только под заголовком а не во всю ширину*/
+	margin: 0 auto;
+	padding: 0.2 em;/*что б граница бордера вышла немного за текст*/
+}
+
+@media screen and (min-width: 768px){/*при миннимальной ширине экрана*/
+
+	.content{
+		width: 50%;
+		max-width: 550px;
+	}
+}
